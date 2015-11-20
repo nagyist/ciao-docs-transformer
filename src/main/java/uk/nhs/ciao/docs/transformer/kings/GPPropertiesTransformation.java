@@ -6,9 +6,9 @@ import java.util.Map;
 import com.google.common.collect.Lists;
 
 import uk.nhs.ciao.docs.parser.PropertyName;
-import uk.nhs.ciao.docs.parser.transformer.PropertiesTransformation;
-import uk.nhs.ciao.docs.parser.transformer.PropertyMutator;
-import uk.nhs.ciao.docs.parser.transformer.TransformationRecorder;
+import uk.nhs.ciao.docs.transformer.PropertiesTransformation;
+import uk.nhs.ciao.docs.transformer.PropertyMutator;
+import uk.nhs.ciao.docs.transformer.TransformationRecorder;
 
 /**
  * Custom {@link PropertiesTransformation} to handle the mapping of incoming

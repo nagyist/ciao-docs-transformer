@@ -1,4 +1,4 @@
-package uk.nhs.ciao.docs.parser.transformer;
+package uk.nhs.ciao.docs.transformer;
 
 import java.util.Set;
 

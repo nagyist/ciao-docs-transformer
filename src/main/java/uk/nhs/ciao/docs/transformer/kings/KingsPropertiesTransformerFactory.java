@@ -1,7 +1,7 @@
 package uk.nhs.ciao.docs.transformer.kings;
 
-import uk.nhs.ciao.docs.parser.transformer.PropertiesTransformer;
-import uk.nhs.ciao.docs.parser.transformer.PropertyAppender;
+import uk.nhs.ciao.docs.transformer.PropertiesTransformer;
+import uk.nhs.ciao.docs.transformer.PropertyAppender;
 
 public class KingsPropertiesTransformerFactory {
 	public static PropertiesTransformer createWordDischargeNotificationTransformer() {

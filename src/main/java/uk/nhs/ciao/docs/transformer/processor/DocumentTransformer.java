@@ -8,9 +8,9 @@ import com.google.common.base.Preconditions;
 
 import uk.nhs.ciao.docs.parser.ParsedDocument;
 import uk.nhs.ciao.docs.parser.PropertyName;
-import uk.nhs.ciao.docs.parser.transformer.MappedPropertiesRecorder;
-import uk.nhs.ciao.docs.parser.transformer.PropertiesTransformation;
-import uk.nhs.ciao.docs.parser.transformer.PropertyCloneUtils;
+import uk.nhs.ciao.docs.transformer.MappedPropertiesRecorder;
+import uk.nhs.ciao.docs.transformer.PropertiesTransformation;
+import uk.nhs.ciao.docs.transformer.PropertyCloneUtils;
 import uk.nhs.ciao.logging.CiaoLogger;
 
 public class DocumentTransformer {

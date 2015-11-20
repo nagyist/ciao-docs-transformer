@@ -1,6 +1,6 @@
 package uk.nhs.ciao.docs.transformer.kent;
 
-import uk.nhs.ciao.docs.parser.transformer.PropertiesTransformer;
+import uk.nhs.ciao.docs.transformer.PropertiesTransformer;
 
 /**
  * Factory to create {@link PropertiesTransformer}s capable of

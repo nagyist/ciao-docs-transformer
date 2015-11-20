@@ -12,7 +12,7 @@ import uk.nhs.ciao.configuration.CIAOConfig;
 import uk.nhs.ciao.docs.parser.HeaderNames;
 import uk.nhs.ciao.docs.parser.ParsedDocument;
 import uk.nhs.ciao.docs.parser.route.InProgressFolderManagerRoute;
-import uk.nhs.ciao.docs.parser.transformer.PropertiesTransformation;
+import uk.nhs.ciao.docs.transformer.PropertiesTransformation;
 import uk.nhs.ciao.docs.transformer.processor.DocumentTransformer;
 import uk.nhs.ciao.exceptions.CIAOConfigurationException;
 import uk.nhs.ciao.logging.CiaoCamelLogger;
