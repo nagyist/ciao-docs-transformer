@@ -11,7 +11,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 /**
- * Splits a property value into a list of values (using the specified patttern)
+ * Splits a property value into a list of values (using the specified pattern)
  * and assigns the result to the target property
  */
 public class SplitListPropertyTransformation implements PropertiesTransformation {
