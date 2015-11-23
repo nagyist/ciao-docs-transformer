@@ -28,6 +28,10 @@ public class DocumentTransformer {
 		this.propertiesTransformation = Preconditions.checkNotNull(propertiesTransformation);
 	}
 	
+	public void setInPlace(final boolean inPlace) {
+		this.inPlace = inPlace;
+	}
+	
 	public ParsedDocument transform(final ParsedDocument source) throws Exception {
 		Preconditions.checkNotNull(source);
 		
