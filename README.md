@@ -15,14 +15,14 @@ Each application can host multiple [routes](http://camel.apache.org/routes.html)
 >   input queue (JMS) -\> [DocumentTransformer](./src/main/java/uk/nhs/ciao/docs/transformer/processor/DocumentTransformer.java) -\> output queue (JMS)
 
 -	*The input and output queues both use the JSON-encoded representation of [ParsedDocument](https://github.com/nhs-ciao/ciao-docs-parser/blob/master/docs/parsed-document.md).*
--	DocumentTransformer uses a delegate [PropertiesTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/PropertiesTransformation.java) instance to transform the incoming *document.getProperties()* map.
+-	DocumentTransformer uses a delegate [PropertiesTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/PropertiesTransformation.java) instance to transform the incoming `document.getProperties()` map.
 
 The details of the JMS queues and document transformers are specified at runtime through a combination of [ciao-configuration](https://github.com/nhs-ciao/ciao-utils) properties and Spring XML files.
 
 **Provided properties transformations:**
 
 -   [PropertiesTransformer](./src/main/java/uk/nhs/ciao/docs/transformer/PropertiesTransformer.java) - Acts as a factory / DSL for specifying a list of specific transformations to perform
--   [NestedPropertiesTransformer](./src/main/java/uk/nhs/ciao/docs/transformer/NestedPropertiesTransformer.java) - A special-case *PropertiesTransformer* which performs transformations on a child property found from the incoming properties.
+-   [NestedPropertiesTransformer](./src/main/java/uk/nhs/ciao/docs/transformer/NestedPropertiesTransformer.java) - A special-case `PropertiesTransformer` which performs transformations on a child property found from the incoming properties.
 -   [RenamePropertyTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/RenamePropertyTransformation.java) - Moves / copies a property to a new name
 -   [SplitPropertyTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/SplitPropertyTransformation.java) - Splits a property value into multiple values and assigns each to a specified target property
 -   [SplitListPropertyTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/SplitListPropertyTransformation.java) - Splits a property value into a list of values (using the specified pattern) and assigns the resulting list to the target property
@@ -30,7 +30,7 @@ The details of the JMS queues and document transformers are specified at runtime
 -   [FormatDatePropertyTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/FormatDatePropertyTransformation.java) - Parses and reformats a date property
 -   [FindAndFormatDatePropertiesTransformation](./src/main/java/uk/nhs/ciao/docs/transformer/FindAndFormatDatePropertiesTransformation.java) - Finds all string properties matching the specified date pattern and reformats them to use the specified output pattern
 
-For more advanced usages, custom transformations can be integrated by implementing the PropertiesTransformation Java interface and providing a suitable spring XML configuration on the classpath.
+For more advanced usages, custom transformations can be integrated by implementing the `PropertiesTransformation` Java interface and providing a suitable spring XML configuration on the classpath.
 
 **Property Selectors:**
 
@@ -41,6 +41,10 @@ Property names support addressing nested properties by key and index:
 - nested arrays: `root[0]`
 
 Names can be combined: `root.child[2].name.firstName`.
+
+Special characters `[ ] . * \` must be delimited by a `\` prefix:
+- `D\.O\.B`
+- `first\\last`
 
 Configuration
 -------------
@@ -61,7 +65,7 @@ The Spring XML files are loaded from the classpath under the [META-INF/spring](.
 
 **Processors:**
 
--   `processors/default.xml` - Creates the following `DocumentTransformer` instances: *kingsWordDischargeNotificationTransformer* and *kentEDNTransformer*
+-   `processors/default.xml` - Creates the following `DocumentTransformer` instances: `kingsWordDischargeNotificationTransformer` and `kentEDNTransformer`
 
 **Messaging:**
 
