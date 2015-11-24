@@ -41,7 +41,10 @@ public class CombinePropertiesTransformation implements PropertiesTransformation
 	public void apply(final TransformationRecorder recorder, final Map<String, Object> source, final Map<String, Object> destination) {
 		final List<Entry<PropertyName, Object>> properties = Lists.newArrayList();
 		for (final PropertyName name: from) {
-			final Object value = retainOriginal ? source.get(name) : source.remove(name);
+			final Object value = name.get(source);
+			if (!retainOriginal) {
+				name.remove(source);
+			}
 			properties.add(SimpleEntry.valueOf(name, value));
 		}
 		
