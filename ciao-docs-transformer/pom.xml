@@ -3,12 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>uk.nhs.ciao</groupId>
-		<artifactId>ciao-parent</artifactId>
+		<artifactId>ciao-docs-transformer-parent</artifactId>
 		<version>0.1</version>
+		<relativePath>../ciao-docs-transformer-parent/pom.xml</relativePath>
 	</parent>
 	
 	<name>ciao-docs-transformer</name>
 	<artifactId>ciao-docs-transformer</artifactId>
+	<packaging>jar</packaging>
 	
 	<url>https://github.com/nhs-ciao/ciao-core</url>
 	<licenses>
